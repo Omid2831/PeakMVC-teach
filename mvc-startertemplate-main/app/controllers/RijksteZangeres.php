@@ -11,10 +11,10 @@ class RijksteZangeres extends BaseController{
         $result = $this->zangeresModel->getAllZangaressen();
         
         $data = [
-            'title' => 'RijksteZangeres',
-            'description' => 'TOP 5 RIJKSTE ZANGERESSEN TER WERELD',
-            'Horloges' => $result
-        ];
+    'title' => 'RijksteZangeres',
+    'description' => 'TOP 5 RIJKSTE ZANGERESSEN TER WERELD',
+    'Zangeres' => $result
+];
         $this->view('RijksteZangeres/index', $data);
     }
    
