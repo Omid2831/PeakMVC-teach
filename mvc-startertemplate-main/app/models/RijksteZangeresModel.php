@@ -18,7 +18,7 @@ class RijksteZangeresModel
                          ,ZANGR.Mobiel
                          ,ZANGR.Leeftijd
                          FROM Zangeres As ZANGR
-                         ORDER BY ZANGR.Nettowaarde DESC";
+                         ORDER BY ZANGR.Nettowaarde DESC, ZANGR.Mobiel DESC";
 
         $this->db->query($query);
 
