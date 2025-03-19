@@ -29,18 +29,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
-                    <?php foreach ($data['Zangeres'] as $zangeres): ?>
+                    <?php if (isset($data['Zangeres'])): ?>
+                        <?php foreach ($data['Zangeres'] as $zangeres): ?>
+                            <tr>
+                                <td><?= $zangeres->Naam; ?></td>
+                                <td><?= $zangeres->Nettowaarde; ?></td>
+                                <td><?= $zangeres->Land ?></td>
+                                <td><?= $zangeres->Mobiel; ?></td>
+                                <td><?= $zangeres->Leeftijd; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
                         <tr>
-                            <td><?= $zangeres->Naam; ?></td>
-                            <td><?= $zangeres->Nettowaarde; ?></td>
-                            <td><?= $zangeres->Land ?></td>
-                            <td><?= $zangeres->Mobiel; ?></td>
-                            <td><?= $zangeres->Leeftijd; ?></td>
+                            <td colspan="5">No data available</td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
+            <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
+          
         </div>
         <div class="col-2"></div>
     </div>
