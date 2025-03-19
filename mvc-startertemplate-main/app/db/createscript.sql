@@ -335,7 +335,7 @@ INSERT INTO Zangeres
 )
 VALUES
   ('Rihanna', 1400,'Barbados', '+1246 2400 1862400', 36, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Madonna', 575,'Verenigde Staten', '+13425 182345', 65, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Taylor Swift', 570,'Verenigde Staten', '+13421 231356', 34, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Beyoncé', 420,'Verenigde Staten', '+18723 213481', 41, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Jennifer Lopez', 400,'Verenigde Staten', '+16254 751243', 54, 1, NULL, SYSDATE(6), SYSDATE(6));
+ ,('Madonna', 575,'Verenigde Staten', '+13425 185876', 65, 1, NULL, SYSDATE(6), SYSDATE(6))
+ ,('Taylor Swift', 570,'Verenigde Staten', '+15876 236512', 34, 1, NULL, SYSDATE(6), SYSDATE(6))
+ ,('Beyoncé', 420,'Verenigde Staten', '+16794 908465', 41, 1, NULL, SYSDATE(6), SYSDATE(6))
+ ,('Jennifer Lopez', 400,'Verenigde Staten', '+13131 857345', 54, 1, NULL, SYSDATE(6), SYSDATE(6));
