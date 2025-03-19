@@ -5,7 +5,7 @@
         <div class="col-2"></div>
         <div class="col-8 text-center">
             <div class="card text-bg-danger">
-                <h1>Hello that is my third view</h1>
+                <h1>Hello that is my 4TH view</h1>
 
                 <h3><?= $data['title'] ?></h3>
                 <h4><?= $data['description'] ?></h4>
@@ -21,30 +21,22 @@
             <table class="table table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Merk</th>
-                        <th>Model</th>
-                        <th>Materiaal</th>
-                        <th>Gewicht</th>
-                        <th>Releasedatum</th>
-                        <th>Waterdichtheid</th>
-                        <th>Prijs</th>
-                        <!-- <th>Verwijderen</th> -->
+                        <th>Naam</th>
+                        <th>Nettowaarde(miljoen)</th>
+                        <th>Land</th>
+                        <th>Mobiel</th>
+                        <th>Leeftijd</th>
                     </tr>
                 </thead>
                 <tbody>
                     <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
-                    <?php foreach ($data['Horloges'] as $horloges): ?>
+                    <?php foreach ($data['Zangeres'] as $zangeres): ?>
                         <tr>
-                            <td><?= $horloges->Merk; ?></td>
-                            <td><?= $horloges->Model; ?></td>
-                            <td><?= $horloges->Materiaal ?></td>
-                            <td><?= $horloges->Gewicht; ?></td>
-                            <td><?= $horloges->Releasedatum; ?></td>
-                            <td><?= $horloges->Waterdichtheid ?></td>
-                            <td><?= $horloges->Prijs; ?></td>
-                            <!-- <td>
-                                <a href="<?= URLROOT; ?>/Horloges/delete/<?= $horloges->Id ?>" class="btn btn-danger">Delete</a>
-                            </td> -->
+                            <td><?= $zangeres->Naam; ?></td>
+                            <td><?= $zangeres->Nettowaarde; ?></td>
+                            <td><?= $zangeres->Land ?></td>
+                            <td><?= $zangeres->Mobiel; ?></td>
+                            <td><?= $zangeres->Leeftijd; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

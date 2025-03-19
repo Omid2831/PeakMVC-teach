@@ -14,6 +14,8 @@
             <a href="<?= URLROOT; ?>/Sneakers/index">Overview Sneakers</a>
             <br>
             <a href="<?= URLROOT; ?>/Horloges/index">Overview Horloges</a>
+            <br>
+            <a href="<?=  URLROOT;?>/RijksteZangeres/index">Overview Zangeressen</a>
 
 
         </div>
