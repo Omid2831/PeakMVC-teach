@@ -16,6 +16,8 @@
             <a href="<?= URLROOT; ?>/Horloges/index">Overview Horloges</a>
             <br>
             <a href="<?=  URLROOT;?>/RijksteZangeres/index">Overview Zangeressen</a>
+            <br>
+            <a href="<?=  URLROOT;?>/Vulkanen/index">Overview Vulkaan</a>
 
 
         </div>
