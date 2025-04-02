@@ -42,9 +42,11 @@
                             <td><?= $horloges->Releasedatum; ?></td>
                             <td><?= $horloges->Waterdichtheid ?></td>
                             <td><?= $horloges->Prijs; ?></td>
-                            <!-- <td>
-                                <a href="<?= URLROOT; ?>/Horloges/delete/<?= $horloges->Id ?>" class="btn btn-danger">Delete</a>
-                            </td> -->
+                            <td>
+                                <a href="<?= URLROOT; ?>/Horloges/delete/<?= $horloges->Id;?>">
+                                    <i class="bi bi-x-octagon-fill text-danger"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
