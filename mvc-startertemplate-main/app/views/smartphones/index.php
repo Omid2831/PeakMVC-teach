@@ -44,6 +44,11 @@
                             <td><?= $smartphone->Schermgrootte; ?></td>
                             <td><?= $smartphone->ReleaseDate; ?></td>
                             <td><?= $smartphone->MegaPixels; ?></td>
+                            <td>
+                                <a href="<?= URLROOT; ?>/smartphones/delete/<?= $smartphone->Id;?>">
+                                    <i class="bi bi-x-octagon-fill text-danger"></i>
+                                </a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
