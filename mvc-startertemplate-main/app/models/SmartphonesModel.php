@@ -12,7 +12,9 @@ class SmartphonesModel
 
     public function getAllSmartphones()
     {
-        $query = "SELECT SMPS.Merk
+        $query = "SELECT 
+                         SMRS.Id
+                        ,SMPS.Merk
                          ,SMPS.Model
                          ,SMPS.Prijs
                          ,SMPS.Geheugen
