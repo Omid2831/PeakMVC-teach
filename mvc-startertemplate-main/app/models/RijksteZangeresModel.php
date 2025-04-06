@@ -2,17 +2,18 @@
 
 class RijksteZangeresModel
 {
-        private $db;
+    private $db;
 
     public function __construct()
     {
         $this->db = new Database();
-        
     }
 
     public function getAllZangaressen()
     {
-        $query = "SELECT ZANGR.Naam
+        $query = "SELECT
+                         ZANGR.Id
+                         ,ZANGR.Naam
                          ,ZANGR.Nettowaarde
                          ,ZANGR.Land
                          ,ZANGR.Mobiel
@@ -23,6 +24,5 @@ class RijksteZangeresModel
         $this->db->query($query);
 
         return $this->db->resultSet();
-
     }
 }

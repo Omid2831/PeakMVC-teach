@@ -12,7 +12,9 @@ class VulkanenModel
 
     public function getAllVulkanen()
     {
-        $query = "SELECT VLK.Naam
+        $query = "SELECT 
+                          VLK.Id
+                         ,VLK.Naam
                          ,VLK.Hoogte
                          ,VLK.Land
                          ,VLK.JaarLaatsteUitbarsting
