@@ -13,7 +13,8 @@ class SneakersModel
     public function getAllSneakers()
      {
           $this->db->query("SELECT
-                                      SN.Merk
+                                      SN.Id
+                                     ,SN.Merk
                                      ,SN.Model
                                      ,SN.Type
                                      FROM Sneakers As SN
