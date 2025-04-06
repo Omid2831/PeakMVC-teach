@@ -17,4 +17,12 @@ class Sneakers extends BaseController{
         ];
         $this->view('Sneakers/index', $data);
     }
+
+    public function delete($Id){
+        if($this->sneakersModel->delete($Id)){
+            header('location: ' . URLROOT . '/Sneakers/index');
+        }else{
+            die('Something went wrong');
+        }
+    }
 }
