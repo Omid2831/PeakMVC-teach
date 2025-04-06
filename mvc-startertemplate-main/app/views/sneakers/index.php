@@ -24,6 +24,7 @@
                         <th>Merk</th>
                         <th>Model</th>
                         <th>Type</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +34,11 @@
                                 <td><?= $sneakers->Merk; ?></td>
                                 <td><?= $sneakers->Model; ?></td>
                                 <td><?= $sneakers->Type; ?></td>
+                                <td>
+                                    <a href="<?= URLROOT; ?>/sneakers/delete/<?= $sneakers->Id;?>">
+                                        <i class="bi bi-x-octagon-fill text-danger"></i>
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                 </tbody>

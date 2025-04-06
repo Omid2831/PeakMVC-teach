@@ -29,6 +29,7 @@
                         <th>Schermgrootte</th>
                         <th>ReleaseDate</th>
                         <th>MegaPixels</th>
+                        <th></th>
 
                     </tr>
                 </thead>
