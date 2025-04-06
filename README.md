@@ -32,6 +32,7 @@ The project includes the following controllers:
 * `Sneakers`: This controller handles the sneakers page and includes methods for displaying a list of sneakers and adding new sneakers.
 * `Horloges`: This controller handles the horloges page and includes methods for displaying a list of horloges and adding new horloges.
 * `RijksteZangeres`: This controller handles the rijkste zangeres page and includes methods for displaying a list of rijkste zangeres and adding new rijkste zangeres.
+* `Vulkaan`: This controller handles the vulkaan page and includes methods for displaying a list of vulkaan and adding new vulkaan.
 
 **Views**
 
@@ -42,6 +43,7 @@ The project includes the following views:
 * `sneakers/index`: This view displays a list of sneakers.
 * `horloges/index`: This view displays a list of horloges.
 * `rijkstezangeres/index`: This view displays a list of rijkste zangeres.
+* `vulkaan/index`: This view displays a list of vulkaan.
 
 **Models**
 
@@ -51,6 +53,7 @@ The project includes the following models:
 * `SneakersModel`: This model handles the data for the sneakers page.
 * `HorlogesModel`: This model handles the data for the horloges page.
 * `RijksteZangeresModel`: This model handles the data for the rijkste zangeres page.
+* `VulkaanModel`: This model handles the data for the vulkaan page.
 
 **Database**
 
