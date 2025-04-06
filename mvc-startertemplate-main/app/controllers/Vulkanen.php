@@ -17,5 +17,13 @@ class Vulkanen extends BaseController{
 ];
         $this->view('Vulkanen/index', $data);
     }
+
+    public function delete($Id){
+        if($this->vulkanenModel->delete($Id)){
+            header('location: ' . URLROOT . '/Vulkanen/index');
+        }else{
+            die('Something went wrong');
+        }
+    }
    
 }
