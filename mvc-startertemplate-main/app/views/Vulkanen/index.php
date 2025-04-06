@@ -26,20 +26,25 @@
                         <th>Land</th>
                         <th>JaarLaatsteUitbarsting</th>
                         <th>AantalSlachtoffers</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
-                        <?php foreach ($data['Vulkaan'] as $vulkaan): ?>
-                            <tr>
-                                <td><?= $vulkaan->Naam; ?></td>
-                                <td><?= $vulkaan->Hoogte; ?></td>
-                                <td><?= $vulkaan->Land; ?></td>
-                                <td><?= $vulkaan->JaarLaatsteUitbarsting; ?></td>
-                                <td><?= $vulkaan->AantalSlachtoffers; ?></td>
-                                
-                            </tr>
-                        <?php endforeach; ?>
+                    <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
+                    <?php foreach ($data['Vulkaan'] as $vulkaan): ?>
+                        <tr>
+                            <td><?= $vulkaan->Naam; ?></td>
+                            <td><?= $vulkaan->Hoogte; ?></td>
+                            <td><?= $vulkaan->Land; ?></td>
+                            <td><?= $vulkaan->JaarLaatsteUitbarsting; ?></td>
+                            <td><?= $vulkaan->AantalSlachtoffers; ?></td>
+                            <td>
+                                <a href="<?= URLROOT; ?>/vulkanen/delete/<?= $vulkaan->Id; ?>">
+                                    <i class="bi bi-x-octagon-fill text-danger"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
