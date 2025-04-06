@@ -21,4 +21,11 @@ class SneakersModel
                          );
           return $this->db->resultSet();
      }
+     public function delete($Id){
+            $sql = "DELETE 
+            FROM Sneakers WHERE Id = :Id";
+            $this->db->query($sql);
+            $this->db->bind(':Id', $Id);
+            return $this->db->execute();    
+     }
 }
