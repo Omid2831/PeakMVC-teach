@@ -2,12 +2,11 @@
 
 class HorlogesModel
 {
-        private $db;
+    private $db;
 
     public function __construct()
     {
         $this->db = new Database();
-        
     }
 
     public function getAllHorloges()
@@ -27,17 +26,40 @@ class HorlogesModel
         $this->db->query($query);
 
         return $this->db->resultSet();
-
     }
 
-    
-    public function delete($id){
+
+    public function delete($id)
+    {
 
         $query = "DELETE FROM Horloges WHERE Id = :Id";
 
         $this->db->query($query);
         $this->db->bind(':Id', $id);
 
-       return $this->db->execute();
+        return $this->db->execute();
+    }
+
+    public function create($data)
+    {
+
+         $sql = "INSERT INTO Horloges (
+                Merk,
+                Model,
+                Prijs
+            ) VALUES (
+                :Merk,
+                :Model,
+                :Prijs
+            )";
+
+    $this->db->query($sql);
+
+
+    $this->db->bind(':Merk', $data['Merk']);
+    $this->db->bind(':Model', $data['Model']);
+    $this->db->bind(':Prijs', $data['Prijs']);
+
+    return $this->db->execute();
     }
 }

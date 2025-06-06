@@ -23,24 +23,17 @@
                     <tr>
                         <th>Merk</th>
                         <th>Model</th>
-                        <th>Materiaal</th>
-                        <th>Gewicht</th>
-                        <th>Releasedatum</th>
-                        <th>Waterdichtheid</th>
                         <th>Prijs</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
+                    <a href="<?= URLROOT ?>/Horloges/create" class=" btn btn-danger mt-3 m-2">Create</a>
+                    <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3 m-2">Back to Home</a>
                     <?php foreach ($data['Horloges'] as $horloges): ?>
                         <tr>
                             <td><?= $horloges->Merk; ?></td>
                             <td><?= $horloges->Model; ?></td>
-                            <td><?= $horloges->Materiaal ?></td>
-                            <td><?= $horloges->Gewicht; ?></td>
-                            <td><?= $horloges->Releasedatum; ?></td>
-                            <td><?= $horloges->Waterdichtheid ?></td>
                             <td><?= $horloges->Prijs; ?></td>
                             <td>
                                 <a href="<?= URLROOT; ?>/Horloges/delete/<?= $horloges->Id ?>" class="btn btn-danger">Delete</a>
