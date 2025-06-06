@@ -28,7 +28,7 @@
                         <th>Releasedatum</th>
                         <th>Waterdichtheid</th>
                         <th>Prijs</th>
-                        <!-- <th>Verwijderen</th> -->
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,9 +42,9 @@
                             <td><?= $horloges->Releasedatum; ?></td>
                             <td><?= $horloges->Waterdichtheid ?></td>
                             <td><?= $horloges->Prijs; ?></td>
-                            <!-- <td>
+                            <td>
                                 <a href="<?= URLROOT; ?>/Horloges/delete/<?= $horloges->Id ?>" class="btn btn-danger">Delete</a>
-                            </td> -->
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

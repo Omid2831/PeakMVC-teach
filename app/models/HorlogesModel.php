@@ -12,7 +12,9 @@ class HorlogesModel
 
     public function getAllHorloges()
     {
-        $query = "SELECT HRS.Merk
+        $query = "SELECT 
+                          HRS.Id
+                         ,HRS.Merk
                          ,HRS.Model
                          ,HRS.Materiaal
                          ,CONCAT(HRS.Gewicht , ' KG') AS Gewicht
@@ -29,14 +31,13 @@ class HorlogesModel
     }
 
     
-    // public function deleteHorlogeById($id){
+    public function delete($id){
 
-    //     $query = "DELETE FROM Horloges WHERE Id = :Id";
+        $query = "DELETE FROM Horloges WHERE Id = :Id";
 
-    //     $this->db->bind(':Id', $id);
+        $this->db->query($query);
+        $this->db->bind(':Id', $id);
 
-    //     $this->db->query($query);
-
-    //    return $this->db->execute();
-    // }
+       return $this->db->execute();
+    }
 }
