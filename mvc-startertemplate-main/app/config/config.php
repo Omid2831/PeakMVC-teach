@@ -11,7 +11,7 @@ define('DB_PASS', '');
 /**
  * De naam van de virtualhost
  */
-define('URLROOT', 'http://www.mvvcrud.org');
+define('URLROOT', 'http://www.mcvongithub.org');
 
 /**
  * Het pad naar de folder app
