@@ -3,8 +3,12 @@
 <div class="container mt-3">
     <!-- Display success or error message -->
     <?php if (!empty($data['message'])): ?>
-        <div class="alert alert-success">
+        <div class="alert alert-success" role="alert">
             <?= htmlspecialchars($data['message']); ?>
+        </div>
+    <?php elseif (!empty($data['error'])): ?>
+        <div class="alert alert-danger" role="alert">
+            <?= htmlspecialchars($data['error']); ?>
         </div>
     <?php endif; ?>
 

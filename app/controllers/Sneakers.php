@@ -43,21 +43,26 @@ class Sneakers extends BaseController{
                 'Model' => trim($_POST['model']),
                 'Type' => trim($_POST['type']),
                 'Prijs' => trim($_POST['prijs']),
+                'message' => '',  // Default empty message
+                'error' => '' // Default empty error message
             ];
 
             if ($this->sneakersModel->create($data)) {
                 // Redirect or show success
-                header("Location: " . URLROOT . "/Sneakers/index");
+                $data['message'] = 'Een record is toegevoegd'; // Success message
+                header( "Refresh:3; url=" . URLROOT . "/Sneakers/index");
                 exit;
             } else {
-                $data['message'] = 'Er is een fout opgetreden bij het toevoegen van het record'; // Error message
-                $this->view('Sneakers/create', $data);
+                $data['error'] = 'Er is een fout opgetreden bij het toevoegen van het record'; // Error message
+                header( "Refresh:3; url=" . URLROOT . "/Sneakers/index");
+                exit;
             }
         } else {
             $data = [
                 'title' => 'Sneakers',
                 'description' => 'This is the Sneakers page',
-                'message' => '' // Default empty message
+                'message' => '', // Default empty message
+                'error' => '' // Default empty error message
             ];
             $this->view('Sneakers/create', $data);
         }
