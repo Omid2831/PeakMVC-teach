@@ -94,7 +94,8 @@ VALUES
      Id                 SMALLINT        UNSIGNED    NOT NULL        AUTO_INCREMENT
     ,Merk               VARCHAR(50)                 NOT NULL
     ,Model              VARCHAR(50)                 NOT NULL
-    ,Type               VARCHAR(50)                 NOT NULL	
+    ,Type               VARCHAR(50)                 NOT NULL
+    ,Prijs  		    DECIMAL(6,2)                NOT NULL	
     ,IsActief           BIT                         NOT NULL        DEFAULT 1
     ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
     ,DatumAangemaakt    DATETIME(6)                 NOT NULL
@@ -103,19 +104,21 @@ VALUES
 ) ENGINE=InnoDB;
 
 INSERT INTO Sneakers
-(
-      Merk
+(     
+      Id
+     ,Merk
      ,Model
      ,Type
+     ,Prijs
      ,IsActief
      ,Opmerking
      ,DatumAangemaakt
      ,DatumGewijzigd
 )
 VALUES
- ('Nike', 'Air Jordan 1','Hardloop', 1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Adidas', 'Yeezy Boost 350','Casual', 1, NULL, SYSDATE(6), SYSDATE(6)),
- ('New Balance', 'Pixel 9 Pro','Basketbal', 1, NULL, SYSDATE(6), SYSDATE(6));
+ (1,'Nike', 'Air Jordan 1','Hardloop',250, 1, NULL, SYSDATE(6), SYSDATE(6)),
+ (2,'Adidas', 'Yeezy Boost 350','Casual', 300, 1, NULL, SYSDATE(6), SYSDATE(6)),
+ (3,'New Balance', 'Pixel 9 Pro','Basketbal', 350, 1, NULL, SYSDATE(6), SYSDATE(6));
 
  -- Step: 06
 -- *****************************************************************************************************

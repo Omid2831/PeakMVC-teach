@@ -24,15 +24,22 @@
                         <th>Merk</th>
                         <th>Model</th>
                         <th>Type</th>
+                        <th>Prijs</th>
+                        <th>Verwijderen</th>
                     </tr>
                 </thead>
                 <tbody>
+                <a href="<?= URLROOT ?>/Sneakers/create" class=" btn btn-danger mt-3 m-2">Create</a>
                 <a href="<?= URLROOT; ?>/pages/index" class="btn btn-primary mt-3">Back to Home</a>
                         <?php foreach ($data['Sneakers'] as $sneakers): ?>
                             <tr>
                                 <td><?= $sneakers->Merk; ?></td>
                                 <td><?= $sneakers->Model; ?></td>
                                 <td><?= $sneakers->Type; ?></td>
+                                <td><?= $sneakers->Prijs; ?></td>
+                                <td>
+                                <a href="<?= URLROOT; ?>/Sneakers/delete/<?= $sneakers->Id ?>" class="btn btn-danger">Delete</a>
+                            </td>
                             </tr>
                         <?php endforeach; ?>
                 </tbody>
