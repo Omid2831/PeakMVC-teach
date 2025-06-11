@@ -30,7 +30,7 @@ class Sneakers extends BaseController{
         ];
 
         // Redirect to the index page
-        header('Refresh:3; url=' . URLROOT . '/Sneakers/index');
+        header('Refresh:2; url=' . URLROOT . '/Sneakers/index');
 
         // Render the view
         $this->view('Sneakers/index', $data);
@@ -50,11 +50,11 @@ class Sneakers extends BaseController{
             if ($this->sneakersModel->create($data)) {
                 // Redirect or show success
                 $data['message'] = 'Een record is toegevoegd'; // Success message
-                header( "Refresh:3; url=" . URLROOT . "/Sneakers/index");
+                header( "Refresh:2; url=" . URLROOT . "/Sneakers/index");
                 exit;
             } else {
                 $data['error'] = 'Er is een fout opgetreden bij het toevoegen van het record'; // Error message
-                header( "Refresh:3; url=" . URLROOT . "/Sneakers/index");
+                header( "Refresh:2; url=" . URLROOT . "/Sneakers/create");
                 exit;
             }
         } else {
